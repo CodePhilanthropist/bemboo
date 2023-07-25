@@ -71,7 +71,10 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 36),
-                BannerItem(),
+                GestureDetector(
+                  child: BannerItem(),
+                  onTap: () => Navigator.pushNamed(context, '/product_details'),
+                ),
                 const SizedBox(height: 36),
                 const SizedBox(
                   child: Row(
