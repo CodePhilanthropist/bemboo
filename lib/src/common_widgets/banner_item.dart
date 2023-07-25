@@ -1,17 +1,18 @@
 import "package:flutter/material.dart";
 
 class BannerItem extends StatelessWidget {
-  final int id;
-  final String productTitle;
-  final String productSubtitle;
-  final String productImage;
+  // final int id;
+  // final String productTitle;
+  // final String productSubtitle;
+  // final String productImage;
 
-  const BannerItem({super.key,
-    required this.id,
-    required this.productTitle,
-    required this.productSubtitle,
-    required this.productImage,
-  });
+  // const BannerItem({
+  //   super.key,
+  //   required this.id,
+  //   required this.productTitle,
+  //   required this.productSubtitle,
+  //   required this.productImage,
+  // });
 
   @override
   Widget build(BuildContext context) {
