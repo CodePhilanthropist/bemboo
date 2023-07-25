@@ -109,7 +109,7 @@ class OnboardingScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 40),
                   GestureDetector(
-                    onTap: () => Navigator.pushNamed(context, '/login'),
+                    onTap: () => Navigator.pushNamed(context, '/home'),
                     child: Container(
                       width: 292,
                       height: 49,
