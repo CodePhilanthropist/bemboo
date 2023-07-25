@@ -2,8 +2,10 @@ import 'package:bemboo/src/common_widgets/banner_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../../common_widgets/category_slider.dart';
 import '../../common_widgets/search_bar.dart';
 import "../../common_widgets/category_button.dart";
+import "../../common_widgets/bottom_sheet_filter.dart";
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -63,7 +65,9 @@ class HomeScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(16),
                         ),
                         child: IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            BottomSheetFilter.showBottomSheet(context);
+                          },
                           icon: SvgPicture.asset("assets/svg/settings.svg"),
                         ),
                       ),
@@ -105,30 +109,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 24),
-                const SizedBox(
-                  width: double.infinity,
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        CategoryButton(
-                          categoryTitle: "Computer",
-                          categoryIcon: "assets/svg/computer.svg",
-                        ),
-                        SizedBox(width: 20),
-                        CategoryButton(
-                          categoryTitle: "Phone",
-                          categoryIcon: "assets/svg/phone2.svg",
-                        ),
-                        SizedBox(width: 20),
-                        CategoryButton(
-                          categoryTitle: "Headset",
-                          categoryIcon: "assets/svg/headset2.svg",
-                        )
-                      ],
-                    ),
-                  ),
-                ),
+                const CategorySlider(),
                 const SizedBox(height: 24),
                 SizedBox(
                   width: double.infinity,
@@ -247,16 +228,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-// BottomNavigationBar(
-//           items: const [
-//             BottomNavigationBarItem(
-//               icon: Icon(Icons.home),
-//               label: 'Home',
-//             ),
-//             BottomNavigationBarItem(
-//               icon: Icon(Icons.person),
-//               label: 'Profile',
-//             ),
-//           ],
-//         ),
