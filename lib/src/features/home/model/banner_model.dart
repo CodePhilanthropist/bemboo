@@ -10,5 +10,4 @@ class CarouselItemModel {
     required this.productSubtitle,
     required this.productImage,
   });
-
 }

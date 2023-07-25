@@ -24,6 +24,7 @@ flutter:
   assets:
     - assets/images/
     - assets/svg/
+    - assets/svg/nav/
   fonts:
     - family: Satoshi Variable
       fonts:
