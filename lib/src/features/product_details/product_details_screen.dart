@@ -236,7 +236,7 @@ class ProductDetailsScreen extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                  // Handle button press here
+                  Navigator.pushNamed(context, "/product_scan");
                 },
                 style: ElevatedButton.styleFrom(
                   padding:

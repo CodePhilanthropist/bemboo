@@ -4,7 +4,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../common_widgets/category_slider.dart';
 import '../../common_widgets/search_bar.dart';
-import "../../common_widgets/category_button.dart";
 import "../../common_widgets/bottom_sheet_filter.dart";
 
 class HomeScreen extends StatelessWidget {
