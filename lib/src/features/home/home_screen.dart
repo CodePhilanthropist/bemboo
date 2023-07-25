@@ -1,5 +1,7 @@
+import 'package:bemboo/src/common_widgets/banner_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:banner_carousel/banner_carousel.dart';
 import '../../common_widgets/search_bar.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -67,58 +69,8 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 36),
-              Container(
-                padding: const EdgeInsets.all(20),
-                height: 140,
-                width: MediaQuery.sizeOf(context).width,
-                decoration: ShapeDecoration(
-                  color: const Color(0xFF22B07D),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                ),
-                child: Stack(
-                  clipBehavior: Clip.none,
-                  children: [
-                    const Positioned(
-                      child: Text(
-                        'Best Selling\nDevice',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontFamily: 'Satoshi Variable',
-                          fontWeight: FontWeight.w400,
-                          letterSpacing: 0.30,
-                        ),
-                      ),
-                    ),
-                    const Positioned(
-                      top: 70,
-                      child: Text(
-                        'Noice Cancelling\nWireless Headphone',
-                        style: TextStyle(
-                          color: Color(0xFFF3F3F8),
-                          fontSize: 12,
-                          fontFamily: 'Satoshi Light',
-                          fontWeight: FontWeight.w500,
-                          letterSpacing: 0.30,
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      top: -40,
-                      right: 4,
-                      child: SizedBox(
-                        width: 151,
-                        height: 156,
-                        child: Image.asset(
-                          "assets/images/headset.png",
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              BannerCarousel(banners: listBanners),
+              BannerItem(),
             ],
           ),
         ),
