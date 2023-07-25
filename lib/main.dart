@@ -1,6 +1,5 @@
-import 'package:bemboo/src/features/home/home_screen.dart';
 import 'package:flutter/material.dart';
-
+import 'src/features/home/home_screen.dart';
 import 'src/features/onboarding/onboarding_screen.dart';
 import 'src/features/product_details/product_details_screen.dart';
 
